@@ -45,7 +45,8 @@ nav {
   padding-top: 20px;
   padding-bottom: 20px;
   /* background-color: #161b22; */
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(240, 245, 255);
   border-radius: 16px 16px 0px 0px;
 }
 
@@ -91,7 +92,11 @@ a.home-a:active,
 }
 
 a.github-icon:hover {
-  filter: drop-shadow(0 0 2em red);
+  filter: drop-shadow(0 0 10px rgb(80, 235, 240));
+}
+
+a.linkedin-icon:hover {
+  filter: drop-shadow(0 0 10px rgb(80, 235, 240));
 }
 
 button.hireMe-button {

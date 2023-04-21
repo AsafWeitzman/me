@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiFillMail, AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 const NavBar = () => {
   return (
@@ -29,11 +29,22 @@ const NavBar = () => {
         </a>
       </div>
       <div style={{ display: "flex", gap: "8px", marginRight: "40px" }}>
-        <a className="github-icon" href="skills" target="_blank">
+        <a
+          className="github-icon"
+          href="https://github.com/AsafWeitzman"
+          target="_blank"
+        >
           <AiFillGithub style={{ fontSize: "25px", color: "rgb(80,80,240)" }} />
         </a>
-        <AiFillLinkedin style={{ fontSize: "25px", color: "rgb(80,80,240)" }} />
-        <AiFillMail style={{ fontSize: "25px", color: "rgb(80,80,240)" }} />
+        <a
+          className="linkedin-icon"
+          href="https://www.linkedin.com/in/asaf-weitzman/"
+          target="_blank"
+        >
+          <AiFillLinkedin
+            style={{ fontSize: "25px", color: "rgb(80,80,240)" }}
+          />
+        </a>
       </div>
     </nav>
   );
