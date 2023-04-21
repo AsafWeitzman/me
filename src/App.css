@@ -1,11 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -39,4 +32,87 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: absolute;
+  left: 0;
+  top: 0; 
+  width: 100%;*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* background-color: #161b22; */
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px 16px 0px 0px;
+}
+
+h1.myName-h1 {
+  font-family: PencilChild;
+}
+
+p.jobTitle-p,
+.hello-p,
+.from-p {
+  font-family: PencilChild;
+}
+
+label.logo {
+  font-family: PencilChild;
+}
+
+a.home-a,
+.about-a,
+.skills-a,
+.contact-a {
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-family: PencilChild;
+  font-size: 20px;
+}
+
+a.home-a:hover,
+.about-a:hover,
+.contact-a:hover,
+.skills-a:hover {
+  background: rgb(164, 164, 241);
+  transition: 0.5s;
+}
+
+a.home-a:active,
+.about-a:active,
+.contact-a:active,
+.skills-a:active {
+  background-color: rgb(60, 60, 162);
+}
+
+a.github-icon:hover {
+  filter: drop-shadow(0 0 2em red);
+}
+
+button.hireMe-button {
+  background-color: rgb(80, 80, 240);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: PencilChild;
+}
+
+button.hireMe-button:hover {
+  background: rgb(164, 164, 241);
+  transition: 0.4s;
+}
+
+button.hireMe-button:active {
+  background-color: rgb(60, 60, 162);
 }
