@@ -1,6 +1,14 @@
+import { useState } from "react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const [isActive, setIsActive] = useState<boolean>(false);
+
+  const toggleNavbar = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <nav>
       <label
@@ -14,21 +22,26 @@ const NavBar = () => {
       >
         A.W.
       </label>
-      <div style={{ display: "flex", gap: "24px" }}>
-        <a className="home-a" href="home">
+      <Link className="toggle-button" to="#" onClick={toggleNavbar}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </Link>
+      <div className={`navbar-links ${isActive ? "active" : ""}`}>
+        <Link className="home-a" to="/home">
           Home
-        </a>
-        <a className="about-a" href="about">
+        </Link>
+        <Link className="about-a" to="/about">
           About
-        </a>
-        <a className="skills-a" href="skills">
+        </Link>
+        <Link className="skills-a" to="/skills">
           Skills
-        </a>
-        <a className="contact-a" href="contact">
+        </Link>
+        <Link className="contact-a" to="/contact">
           Contact
-        </a>
+        </Link>
       </div>
-      <div style={{ display: "flex", gap: "8px", marginRight: "40px" }}>
+      <div className={`navbar-socialLinks ${isActive ? "active" : ""}`}>
         <a
           className="github-icon"
           href="https://github.com/AsafWeitzman"
