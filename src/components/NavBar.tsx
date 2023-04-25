@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -10,7 +11,11 @@ const NavBar = () => {
   };
 
   return (
-    <nav>
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <label
         className="logo"
         style={{
@@ -27,7 +32,7 @@ const NavBar = () => {
         <span className="bar"></span>
         <span className="bar"></span>
       </Link>
-      <div className={`navbar-links ${isActive ? "active" : ""}`}>
+      <motion.div className={`navbar-links ${isActive ? "active" : ""}`}>
         <Link className="home-a" to="/home">
           Home
         </Link>
@@ -40,8 +45,8 @@ const NavBar = () => {
         <Link className="contact-a" to="/contact">
           Contact
         </Link>
-      </div>
-      <div className={`navbar-socialLinks ${isActive ? "active" : ""}`}>
+      </motion.div>
+      <div className={`navbar-socialLinks`}>
         <a
           className="github-icon"
           href="https://github.com/AsafWeitzman"
@@ -59,7 +64,7 @@ const NavBar = () => {
           />
         </a>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 export default NavBar;

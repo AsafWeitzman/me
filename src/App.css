@@ -8,12 +8,28 @@
   overflow: hidden;
 }
 
-.card-content {
+.home-card-content {
   margin-top: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+.about-card-content {
+  margin-top: 0px;
+  padding: 40px 40px 40px 40px;
+}
+
+/*  */
+.grid-container-skills {
+  margin: 0 24px 24px 24px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 16px;
+  /* background-color: #2196f3; */
+  padding: 16px;
+}
+/*  */
 
 nav {
   display: flex;
@@ -136,6 +152,14 @@ button.hireMe-button:active {
   .myName-h1 {
     display: none;
   }
+
+  .grid-container-skills {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 16px;
+    /* background-color: #2196f3; */
+    padding: 16px;
+  }
 }
 
 @media (max-width: 740px) {
@@ -160,18 +184,18 @@ button.hireMe-button:active {
 
   .navbar-links {
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     align-items: center;
     width: 100%;
   }
 
-  .navbar-socialLinks {
+  /* .navbar-socialLinks {
     flex-direction: column;
     gap: 4px;
     margin-right: 0px;
     align-items: center;
     width: 100%;
-  }
+  } */
 
   .card-content {
     margin-top: 0px;
@@ -182,11 +206,14 @@ button.hireMe-button:active {
     position: absolute;
     top: 0;
     right: 0;
-    padding-top: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 0px 0px 16px 16px;
+    box-shadow: 0px 16px 16px rgba(109, 109, 109, 0.2);
     background-color: rgb(190, 204, 232);
   }
 
-  .navbar-socialLinks.active {
+  /* .navbar-socialLinks.active {
     display: flex;
     position: absolute;
     top: 140px;
@@ -195,10 +222,27 @@ button.hireMe-button:active {
     border-radius: 0px 0px 16px 16px;
     box-shadow: 0px 16px 16px rgba(109, 109, 109, 0.2);
     background-color: rgb(190, 204, 232);
-  }
+  } */
 
   .from-p,
   .hello-p {
     display: none;
+  }
+
+  /* .aboutMe-p {
+      width: 30ch;
+    } */
+
+  .about-card-content {
+    margin-top: 0px;
+    padding: 0px 40px 40px 40px;
+  }
+
+  .grid-container-skills {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+    /* background-color: #2196f3; */
+    padding: 16px;
   }
 }
