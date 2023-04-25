@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { Jobs } from "../common/jobs";
 import { TheCollegeofManagementLogo } from "../common/constant";
 
@@ -6,11 +8,16 @@ interface JobProps {
   companyName: string;
   jobTitle: string;
   workPeriod: string;
+  index: number;
 }
 
-const Job = ({ logo, companyName, jobTitle, workPeriod }: JobProps) => {
+const Job = ({ logo, companyName, jobTitle, workPeriod, index }: JobProps) => {
   return (
-    <div
+    <motion.div
+      variants={itemVariants}
+      initial="initial"
+      animate="animate"
+      transition={{ duration: 0.2, delay: index * 0.2 }}
       style={{
         display: "flex",
         alignItems: "center",
@@ -30,16 +37,23 @@ const Job = ({ logo, companyName, jobTitle, workPeriod }: JobProps) => {
         <p style={{ padding: 0, margin: 0 }}>{companyName}</p>
         <p style={{ padding: 0, margin: 0, color: "#484E4C" }}>{workPeriod}</p>
       </div>
-    </div>
+    </motion.div>
   );
+};
+
+const itemVariants = {
+  initial: { x: 0, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
 };
 
 const JobsList = () => {
   return (
     <>
-      {Jobs.map((job) => {
+      {Jobs.map((job, index) => {
         return (
           <Job
+            key={index}
+            index={index}
             logo={job.logo}
             companyName={job.companyName}
             jobTitle={job.jobTitle}

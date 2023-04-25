@@ -33,16 +33,16 @@ const NavBar = () => {
         <span className="bar"></span>
       </Link>
       <motion.div className={`navbar-links ${isActive ? "active" : ""}`}>
-        <Link className="home-a" to="/home">
+        <Link className="home-a" to="/home" onClick={toggleNavbar}>
           Home
         </Link>
-        <Link className="about-a" to="/about">
+        <Link className="about-a" to="/about" onClick={toggleNavbar}>
           About
         </Link>
-        <Link className="skills-a" to="/skills">
+        <Link className="skills-a" to="/skills" onClick={toggleNavbar}>
           Skills
         </Link>
-        <Link className="contact-a" to="/contact">
+        <Link className="contact-a" to="/contact" onClick={toggleNavbar}>
           Contact
         </Link>
       </motion.div>

@@ -26,9 +26,25 @@
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   gap: 16px;
-  /* background-color: #2196f3; */
   padding: 16px;
 }
+
+.skills-title-h3 {
+  margin: 40px 0 0 40px;
+}
+
+.skillBox:hover {
+  filter: drop-shadow(0 0 0px rgb(80, 235, 240));
+}
+
+/*  */
+
+/* contact */
+
+.contact-title-h3 {
+  margin: 40px 0 0 40px;
+}
+
 /*  */
 
 nav {
@@ -244,5 +260,13 @@ button.hireMe-button:active {
     gap: 16px;
     /* background-color: #2196f3; */
     padding: 16px;
+  }
+
+  .skills-title-h3 {
+    margin: 0 0 0 40px;
+  }
+
+  .contact-title-h3 {
+    margin: 0 0 0 40px;
   }
 }
